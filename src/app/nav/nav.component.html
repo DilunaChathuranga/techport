@@ -1,0 +1,95 @@
+
+
+
+
+<!-- ======= Mobile view nav with Toggle ======= -->
+<div>
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"
+  [ngClass]="{'mobile-nav-active':sidebarVisible}"
+  (click)="toggleSidebar()">
+  <header id="header" >
+    <div class="d-flex flex-column">
+      <div class="profile">
+        <img src="../assets/img/MyProfessionalPic.jpg" alt="" class="img-fluid rounded-circle" >
+        <h1 class="text-light"><a href="index.html"> ~Diluna~</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="#" class="whatsapp" title="0701029511"><i class="bx bxl-whatsapp"></i></a>
+          <a href="https://github.com/DilunaChathuranga" target="_blank" class="github" title="Github"><i class="bx bxl-github"></i></a>
+          <a href="live:diluna617" class="google-plus"><i class="bx bxl-skype"   title="live:diluna617"></i></a>
+          <a href="https://www.linkedin.com/in/diluna617/" target="_blank" class="linkedin"  title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#home" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+           <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+           <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Skill</span></a></li>
+            <!--<li><a href="#services" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Service</span></a></li>-->
+           <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Project</span></a></li>
+          
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+</i>
+</div>
+
+
+<!-- ======= Normal view nav ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+      <div class="profile">
+        <img src="../assets/img/MyProfessionalPic.jpg" alt="" class="img-fluid rounded-circle" >
+        <h1 class="text-light"><a href="index.html"> ~Diluna~</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="#" class="whatsapp" title="0701029511"><i class="bx bxl-whatsapp"></i></a>
+          <a href="https://github.com/DilunaChathuranga" target="_blank" class="github" title="Github"><i class="bx bxl-github"></i></a>
+          <a href="live:diluna617" class="google-plus"><i class="bx bxl-skype"   title="live:diluna617"></i></a>
+          <a href="https://www.linkedin.com/in/diluna617/" target="_blank" class="linkedin"  title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#home" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+           <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+           <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Skill</span></a></li>
+           <!--<li><a href="#services" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Service</span></a></li>-->
+           <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Project</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+
+          <!-- to manage the site remove <ng-template #authLinks>, then you can see login and manage links-->
+            <ng-template #authLinks>
+          <li *ngIf="!(auth.isAuthenticated$ |async); else authLinks">
+            <a class="px-2" href="#" (click)="openModal($event)">Login / Register</a>
+          </li>
+          </ng-template>
+
+
+            <ng-template #authLinks>
+              <li>
+                <a class="px-2" routerLink="/manage" routerLinkActive="text-indigo-400" [routerLinkActiveOptions]="{exact:true}" [queryParams]="{sort:'1'}">Manage</a>
+              </li>
+              <li>
+                <a class="px-2" routerLink="/upload" routerLinkActive="text-indigo-400" [routerLinkActiveOptions]="{exact:true}">Upload</a>
+              </li>
+              <li>
+                <a class="px-2" (click)="auth.logout($event)">Logout</a>
+              </li>
+            </ng-template>
+
+        
+
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+
+  
+
+
