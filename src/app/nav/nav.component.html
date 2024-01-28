@@ -63,24 +63,10 @@
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
 
           <!-- to manage the site remove <ng-template #authLinks>, then you can see login and manage links-->
-            <ng-template #authLinks>
-          <li *ngIf="!(auth.isAuthenticated$ |async); else authLinks">
-            <a class="px-2" href="#" (click)="openModal($event)">Login / Register</a>
-          </li>
-          </ng-template>
+         
 
 
-            <ng-template #authLinks>
-              <li>
-                <a class="px-2" routerLink="/manage" routerLinkActive="text-indigo-400" [routerLinkActiveOptions]="{exact:true}" [queryParams]="{sort:'1'}">Manage</a>
-              </li>
-              <li>
-                <a class="px-2" routerLink="/upload" routerLinkActive="text-indigo-400" [routerLinkActiveOptions]="{exact:true}">Upload</a>
-              </li>
-              <li>
-                <a class="px-2" (click)="auth.logout($event)">Logout</a>
-              </li>
-            </ng-template>
+            
 
         
 
